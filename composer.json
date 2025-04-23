@@ -1,0 +1,32 @@
+<?php
+
+// composer.json (Root of your package)
+{
+    "name": "aicodesdeveloper/chargebee-laravel",
+    "description": "Chargebee subscription integration for Laravel 12",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": "^8.2",
+        "illuminate/support": "^12.0",
+        "chargebee/chargebee-php": "^3.0",
+        "guzzlehttp/guzzle": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "AicodesDeveloper\\Chargebee\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "AicodesDeveloper\\Chargebee\\ChargebeeServiceProvider"
+            ],
+            "facades": {
+                "Chargebee": "AicodesDeveloper\\Chargebee\\Facades\\Chargebee"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
